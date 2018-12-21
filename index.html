@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
     </head>
     <body>
         <h1>Hogsmeade Hangout</h1>
@@ -33,24 +34,58 @@
                                     </thead>
                                     <tbody>
                                       <tr>
-                                        <td id="sorting-quiz">Sorting Ceremony</td>
+                                        <td id="sorting-quiz-nav">Sorting Ceremony</td>
                                       </tr>
                                       <tr>
-                                        <td id="movie-section">A History of Magic</td>
+                                        <td id="movie-section-nav">A History of Magic</td>
                                       </tr>
                                       <tr>
-                                        <td id="house-points">House Points</td>
+                                        <td id="house-points-nav">House Points</td>
                                       </tr>
                                       <tr>
-                                        <td id="chat-room">Great Hall</td>
+                                        <td id="chat-room-nav">Great Hall</td>
                                       </tr>
                                     <img src="https://findicons.com/files/icons/423/harry_potter/128/home.png">
                                     </tbody>
                                   </table>
                     </div>
                 </div>
-                </div>
+        </div>
             
-        <script src="" async defer></script>
+		<div class="container">
+
+            <!-- <button type='button' class="btn btn-success" data-toggle="modal" data-target="#popUpWindow"></button> -->
+            
+            <div class="modal fade" id="popUpWindow">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">Chat User Name</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                    <form role="form">
+                        <div class="form-group">
+                        <input type="text" class="form-control" id="user-name" placeholder="Harry Potter"/>
+                        <!-- <input type="password" class="form-control" placeholder="Password" /> -->
+                        </div>
+                    </form>
+                    </div>
+                    <!-- footer -->
+                    <div class="modal-footer">
+                    <button class="btn btn-primary btn-block" id="modal-login">Log In</button>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+            
+    	</div>
+    	
+		<script src="assets/javascript/chatroom.js"></script>
+		<script src="assets/javascript/housepoints.js"></script>
+
     </body>
 </html>
