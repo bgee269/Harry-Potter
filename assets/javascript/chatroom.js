@@ -22,7 +22,6 @@ $("#chat-room-nav").on("click", function(event) {
 //if chat room was clicked
 function chatRoom(){
    
-    var chatTextBox = $("<div>");
     //run when database is updated
     database.ref().on("value", function(snapshot) {
         globalSnapshot = snapshot.val();
@@ -31,6 +30,7 @@ function chatRoom(){
         {
             //create submit button, id, and chat room
             var myDiv = $("<div>");
+            myDiv.attr("id", "chatroom-div");
             var chatInput = $("<form>");
             chatInput.append("<input type='text' name='chatComment' id='chatComment' value=''><br><input id='submit' type='submit' value='Submit'>");
             myDiv.append(chatInput);

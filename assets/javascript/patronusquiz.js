@@ -90,6 +90,7 @@ $("#patronus-quiz-nav").on("click", function(event) {
 function patronusQuiz(){
     $("#main-content-area").empty();
     var myDiv = $("<div>");
+    myDiv.attr("id", "question-div");
     myDiv.append("<h1 id='question'></h1>");
     myDiv.append("<h3 id='answer1'></h3>");
     myDiv.append("<h3 id='answer2'></h3>");
@@ -264,6 +265,6 @@ function patronusAnswer(){
 
     }
     console.log(playerPatronus);
-    $("#question").text(playerPatronus);
-    $("#question").append('<img id="theImg" src="assets/images/patronuses/'+playerPatronus+'.png" />');
+    $("#question").text("Congrats! Your Patronus is a "+playerPatronus);
+    $("#question").append('<img id="patronus-image" src="assets/images/patronuses/'+playerPatronus+'.png" />');
 }

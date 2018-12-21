@@ -8,10 +8,13 @@ $("#house-points-nav").on("click", function(event) {
 });
 
 function housePoints(){
+    var chartDiv = $("<div>");
+    chartDiv.attr("id", "chart-div");
     var housePoints = $("<canvas>");
     housePoints.attr("id", "myChart");
+    chartDiv.append(housePoints);
     $("#main-content-area").empty();
-    $("#main-content-area").append(housePoints);
+    $("#main-content-area").append(chartDiv);
     //run when database is updated
     database.ref().on("value", function(snapshot) {
         globalSnapshot = snapshot.val();
@@ -21,6 +24,7 @@ function housePoints(){
 }
 
 function makeHouseChart(){
+    Chart.defaults.global.defaultFontFamily = "HogwartsWizard";
     var ctx = $("#myChart");
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -45,10 +49,17 @@ function makeHouseChart(){
             }]
         },
         options: {
+            responsive: true,
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero:true,
+                        fontSize: 18
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontSize: 18
                     }
                 }]
             },
