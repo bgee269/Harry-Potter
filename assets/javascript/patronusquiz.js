@@ -265,4 +265,5 @@ function patronusAnswer(){
     }
     console.log(playerPatronus);
     $("#question").text(playerPatronus);
+    $("#question").append('<img id="theImg" src="assets/images/patronuses/'+playerPatronus+'.png" />');
 }
