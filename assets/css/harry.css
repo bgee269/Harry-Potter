@@ -1,4 +1,4 @@
-@font-face {font-family:"HogwartsWizard";src:url("HogwartsWizard.eot?") format("eot"),url("HogwartsWizard.woff") format("woff"),url("HogwartsWizard.ttf") format("truetype"),url("HogwartsWizard.svg#HogwartsWizard") format("svg");font-weight:normal;font-style:normal;}
+@font-face {font-family:"HogwartsWizard";src:url("assets/fonts/HogwartsWizard.eot?") format("eot"),url("assets/fonts/HogwartsWizard.woff") format("woff"),url("assets/fonts/HogwartsWizard.ttf") format("truetype"),url("HogwartsWizard.svg#HogwartsWizard") format("svg");font-weight:normal;font-style:normal;}
 
 *{
   font-family: "HogwartsWizard";

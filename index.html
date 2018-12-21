@@ -7,14 +7,20 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
-        <link rel="stylesheet" type="text/css" href="harry.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/harry.css">
+       <script src="Chart.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    </head>
     <body>
-        <h1>Welcome to Hogwarts</h1>
+        <h1>Hogsmeade Hangout</h1>
         <div class="container">
 
                 <div class="row1">
-                    <div id ="Maincontentarea" class="col-md-6">
-                        <img style="float:left" src="https://files.slack.com/files-pri/TD4PVN65N-FF0GW7K8F/acceptance_letter.jpg">
+                    <div id ="main-content-area" class="col-md-6">
+                        <img style="float:left" src="assets/images/acceptance-letter.jpg">
                     </div>
                     
                     </div>
@@ -27,22 +33,16 @@
                                     </thead>
                                     <tbody>
                                       <tr>
-                                        <th scope="row"></th>
-                                        <td>Harry</td>
-                                        <td>Ron</td>
-                                        <td>Griffindor</td>
+                                        <td id="sorting-quiz">Sorting Ceremony</td>
                                       </tr>
                                       <tr>
-                                        <th scope="row"></th>
-                                        <td>Snape</td>
-                                        <td>Draco</td>
-                                        <td>Slitherin</td>
+                                        <td id="movie-section">A History of Magic</td>
                                       </tr>
                                       <tr>
-                                        <th scope="row"></th>
-                                        <td>Rowena </td>
-                                        <td>Luna</td>
-                                        <td>Ravenclaw</td>
+                                        <td id="house-points">House Points</td>
+                                      </tr>
+                                      <tr>
+                                        <td id="chat-room">Great Hall</td>
                                       </tr>
                                     <img src="https://findicons.com/files/icons/423/harry_potter/128/home.png">
                                     </tbody>
