@@ -54,12 +54,16 @@ function makeHouseChart(){
                 yAxes: [{
                     ticks: {
                         beginAtZero:true,
-                        fontSize: 18
+                        fontSize: 18,
+                        fontColor: "black",
+                        fontStyle: "bold"
                     }
                 }],
                 xAxes: [{
                     ticks: {
-                        fontSize: 18
+                        fontSize: 18,
+                        fontColor: "black",
+                        fontStyle: "bold"
                     }
                 }]
             },
