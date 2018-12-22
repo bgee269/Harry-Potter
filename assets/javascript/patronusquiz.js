@@ -84,7 +84,32 @@ $("#patronus-quiz-nav").on("click", function(event) {
     patronusSubSet1=0;
     patronusSubSet2=0;
     patronusSubSet3=0;
-    patronusQuiz();
+    $("#main-content-area").empty();
+    var myDiv = $("<div>");
+    myDiv.attr("id", "question-div");
+    myDiv.append("Welcome to the Defense of the Dark Arts class!");
+    myDiv.append("</br>");
+    myDiv.append("</br>");
+    myDiv.append("They say a good offense is a good defense, and to protect yourself from the dementors, you're going to need a Patronus. This quiz will guide you to your chosen Patronus. Press start to begin.");
+    // var startButton = $("<button>");
+    // startButton.attr("id", "start-button");
+    // startButton.text("Start");
+    myDiv.append("</br>");
+    myDiv.append("</br>");
+    $("#start-button").unbind("click");
+    $("#start-button").on("click", function(event) {
+        console.log("hello");
+        patronusQuiz();
+    });
+    myDiv.append($('<button/>', {
+        text: 'Start', //set text 1 to 10
+        id: 'start-button',
+        click: function () { patronusQuiz(); }
+    }));
+    
+    $("#main-content-area").append(myDiv);
+
+    // patronusQuiz();
 });
 
 function patronusQuiz(){
