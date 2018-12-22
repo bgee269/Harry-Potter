@@ -1,0 +1,31 @@
+#answer1:hover, #answer2:hover, #answer3:hover, #answer4:hover{
+    background-color: #FF2400;
+    color: #FFD700;
+}
+
+#question-div{
+    border: 1px dashed #FFD700;
+	box-shadow: 0 0 0 3px #FF2400, 0 0 0 5px #FFD700, 0 0 0 10px #FF2400, 0 0 2px 10px #FFD700;
+    /* height: 480px; */
+    width: 640px;
+    text-align: center;
+}
+#patronus-image{
+    max-width: 639px;
+}
+#chart-div{
+    border: 1px dashed #FFD700;
+	box-shadow: 0 0 0 3px #FF2400, 0 0 0 5px #FFD700, 0 0 0 10px #FF2400, 0 0 2px 10px #FFD700;
+    /* height: 480px; */
+    width: 640px;  
+    height: 480px;
+    text-align: center;
+}
+#chatroom-div{
+    border: 1px dashed #FFD700;
+	box-shadow: 0 0 0 3px #FF2400, 0 0 0 5px #FFD700, 0 0 0 10px #FF2400, 0 0 2px 10px #FFD700;
+    /* height: 480px; */
+    width: 640px;   
+    height: 480px;
+    overflow: auto;
+}
