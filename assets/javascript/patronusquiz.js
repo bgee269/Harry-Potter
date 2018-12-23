@@ -87,10 +87,10 @@ $("#patronus-quiz-nav").on("click", function(event) {
     $("#main-content-area").empty();
     var myDiv = $("<div>");
     myDiv.attr("id", "question-div");
-    myDiv.append("Welcome to the Defense of the Dark Arts class!");
+    myDiv.append("<p class='myText'>Welcome to the Defense of the Dark Arts class!</p>");
     myDiv.append("</br>");
     myDiv.append("</br>");
-    myDiv.append("They say a good offense is a good defense, and to protect yourself from the dementors, you're going to need a Patronus. This quiz will guide you to your chosen Patronus. Press start to begin.");
+    myDiv.append("<p class='myText'>They say a good offense is a good defense, and to protect yourself from the dementors, you're going to need a Patronus. This quiz will guide you to your chosen Patronus. Press start to begin.</p>");
     // var startButton = $("<button>");
     // startButton.attr("id", "start-button");
     // startButton.text("Start");
@@ -108,6 +108,7 @@ $("#patronus-quiz-nav").on("click", function(event) {
     }));
     
     $("#main-content-area").append(myDiv);
+    $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 25 }});
 
     // patronusQuiz();
 });

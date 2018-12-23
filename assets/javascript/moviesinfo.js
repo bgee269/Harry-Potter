@@ -1,3 +1,5 @@
+var fadeDuration = 1000;
+
 $("#movie-section-nav").on("click", function(event) {
     event.preventDefault();
     $("#main-content-area").empty();
@@ -68,8 +70,10 @@ $("#movie-section-nav").on("click", function(event) {
         }
         else{
             $("#scorcerer-poster").empty();
+            $("#scorcerer-poster").hide()
             $("#scorcerer-poster").append('<img class="moviePoster" src="assets/images/posters/scorcerer-poster.png" />');
             $(this).attr("data-state", "poster");
+            $("#scorcerer-poster").fadeIn(fadeDuration);
         }
     });
     $("#chamber-poster").on("click", function(event) {
@@ -79,8 +83,10 @@ $("#movie-section-nav").on("click", function(event) {
         }
         else{
             $("#chamber-poster").empty();
+            $("#chamber-poster").hide();
             $("#chamber-poster").append('<img class="moviePoster" src="assets/images/posters/chamber-poster.png" />');
             $(this).attr("data-state", "poster");
+            $("#chamber-poster").fadeIn(fadeDuration);
         }
     });
     $("#prisoner-poster").on("click", function(event) {
@@ -90,8 +96,10 @@ $("#movie-section-nav").on("click", function(event) {
         }
         else{
             $("#prisoner-poster").empty();
+            $("#prisoner-poster").hide();
             $("#prisoner-poster").append('<img class="moviePoster" src="assets/images/posters/prisoner-poster.png" />');
             $(this).attr("data-state", "poster");
+            $("#prisoner-poster").fadeIn(fadeDuration);
         }
     });
     $("#goblet-poster").on("click", function(event) {
@@ -101,8 +109,10 @@ $("#movie-section-nav").on("click", function(event) {
         }
         else{
             $("#goblet-poster").empty();
+            $("#goblet-poster").hide();
             $("#goblet-poster").append('<img class="moviePoster" src="assets/images/posters/goblet-poster.png" />');
             $(this).attr("data-state", "poster");
+            $("#goblet-poster").fadeIn(fadeDuration);
         }
     });
     $("#order-poster").on("click", function(event) {
@@ -112,8 +122,10 @@ $("#movie-section-nav").on("click", function(event) {
         }
         else{
             $("#order-poster").empty();
+            $("#order-poster").hide();
             $("#order-poster").append('<img class="moviePoster" src="assets/images/posters/order-poster.png" />');
             $(this).attr("data-state", "poster");
+            $("#order-poster").fadeIn(fadeDuration);
         }
     });
     $("#prince-poster").on("click", function(event) {
@@ -123,8 +135,10 @@ $("#movie-section-nav").on("click", function(event) {
         }
         else{
             $("#prince-poster").empty();
+            $("#prince-poster").hide();
             $("#prince-poster").append('<img class="moviePoster" src="assets/images/posters/prince-poster.png" />');
             $(this).attr("data-state", "poster");
+            $("#prince-poster").fadeIn(fadeDuration);
         }
     });
     $("#hallows-poster").on("click", function(event) {
@@ -134,8 +148,10 @@ $("#movie-section-nav").on("click", function(event) {
         }
         else{
             $("#hallows-poster").empty();
+            $("#hallows-poster").hide();
             $("#hallows-poster").append('<img class="moviePoster" src="assets/images/posters/hallows-poster.png" />');
             $(this).attr("data-state", "poster");
+            $("#hallows-poster").fadeIn(fadeDuration);
         }
     });
     $("#hallows2-poster").on("click", function(event) {
@@ -145,8 +161,10 @@ $("#movie-section-nav").on("click", function(event) {
         }
         else{
             $("#hallows2-poster").empty();
+            $("#hallows2-poster").hide();
             $("#hallows2-poster").append('<img class="moviePoster" src="assets/images/posters/hallows-poster.png" />');
             $(this).attr("data-state", "poster");
+            $("#hallows2-poster").fadeIn(fadeDuration);
         }
     });
 });
@@ -163,11 +181,14 @@ function loadMovieInfo(theMovie, theItem){
         // console.log(response);
         // console.log(theItem);
         theItem.empty();
-        theItem.append("<h1>"+response.Title+"</h1>");
-        theItem.append("<p>Released: "+response.Released+"</p>");
-        theItem.append("<p>Runtime: "+response.Runtime+"</p>");
-        theItem.append("<p>Directed by: "+response.Director+"</p>");
-        theItem.append("<p>Written by: "+response.Writer+"</p>");
-        theItem.append("<p>Synopsis: "+response.Plot+"</p>");
+        theItem.append("<h1 class='myText'>"+response.Title+"</h1>");
+        theItem.append("<p class='myText'>Released: "+response.Released+"</p>");
+        theItem.append("<p class='myText'>Runtime: "+response.Runtime+"</p>");
+        theItem.append("<p class='myText'>Directed by: "+response.Director+"</p>");
+        theItem.append("<p class='myText'>Written by: "+response.Writer+"</p>");
+        theItem.append("<p class='myText'>Synopsis: "+response.Plot+"</p>");
+        theItem.hide();
+        theItem.fadeIn(fadeDuration);
+        $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 25 }});
     });
 }
