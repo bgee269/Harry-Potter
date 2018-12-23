@@ -85,15 +85,13 @@ $("#patronus-quiz-nav").on("click", function(event) {
     patronusSubSet2=0;
     patronusSubSet3=0;
     $("#main-content-area").empty();
+    $("#main-content-area").hide();
     var myDiv = $("<div>");
     myDiv.attr("id", "question-div");
-    myDiv.append("<p class='myText'>Welcome to the Defense of the Dark Arts class!</p>");
+    myDiv.append("<p>Welcome to the Defense of the Dark Arts class!</p>");
     myDiv.append("</br>");
     myDiv.append("</br>");
     myDiv.append("<p class='myText'>They say a good offense is a good defense, and to protect yourself from the dementors, you're going to need a Patronus. This quiz will guide you to your chosen Patronus. Press start to begin.</p>");
-    // var startButton = $("<button>");
-    // startButton.attr("id", "start-button");
-    // startButton.text("Start");
     myDiv.append("</br>");
     myDiv.append("</br>");
     $("#start-button").unbind("click");
@@ -104,19 +102,24 @@ $("#patronus-quiz-nav").on("click", function(event) {
     myDiv.append($('<button/>', {
         text: 'Start', //set text 1 to 10
         id: 'start-button',
+        class: 'buttonClass',
         click: function () { patronusQuiz(); }
     }));
-    
     $("#main-content-area").append(myDiv);
-    $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 25 }});
-
-    // patronusQuiz();
+    $("#start-button").css("visibility", "hidden");
+    $("#main-content-area").fadeIn(fadeDuration);
+    $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 20, callback: function () {showButton()} }});
 });
+
+function showButton(){
+    $("#start-button").css("visibility", "visible");
+}
 
 function patronusQuiz(){
     $("#main-content-area").empty();
     var myDiv = $("<div>");
     myDiv.attr("id", "question-div");
+    myDiv.addClass("row");
     myDiv.append("<h1 id='question'></h1>");
     myDiv.append("<h3 id='answer1'></h3>");
     myDiv.append("<h3 id='answer2'></h3>");
@@ -170,14 +173,6 @@ function patronusQuiz(){
 function newQuestion(){
     console.log("Question number: "+currentQuestionNumber);
 
-    // console.log("set 1 "+patronusSet1);
-    // console.log("set 2 "+patronusSet2);
-    // console.log("set 3 "+patronusSet3);
-    // console.log("set 4 "+patronusSet4);
-    // console.log("subset 1 "+patronusSubSet1);
-    // console.log("subset 2 "+patronusSubSet2);
-    // console.log("subset 3 "+patronusSubSet3);
-
     if(currentQuestionNumber<=5){
         $("#question").text(questionObject['question'+currentQuestionNumber].question);
         $("#answer1").text(questionObject['question'+currentQuestionNumber].answer1);
@@ -204,13 +199,7 @@ function newQuestion(){
 
 function patronusAnswer(){
     var playerPatronus = "potato";
-    console.log("set 1 "+patronusSet1);
-    console.log("set 2 "+patronusSet2);
-    console.log("set 3 "+patronusSet3);
-    console.log("set 4 "+patronusSet4);
-    console.log("subset 1 "+patronusSubSet1);
-    console.log("subset 2 "+patronusSubSet2);
-    console.log("subset 3 "+patronusSubSet3);
+
     if(patronusSet1>patronusSet2&&patronusSet1>patronusSet3&&patronusSet1>patronusSet4)
     {
         console.log("set 1 is biggest");
@@ -290,7 +279,6 @@ function patronusAnswer(){
     else{
 
     }
-    console.log(playerPatronus);
     $("#question").text("Congrats! Your Patronus is a "+playerPatronus);
     $("#question").append('<img id="patronus-image" src="assets/images/patronuses/'+playerPatronus+'.png" />');
 }

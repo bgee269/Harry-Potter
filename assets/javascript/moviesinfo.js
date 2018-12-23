@@ -3,6 +3,8 @@ var fadeDuration = 1000;
 $("#movie-section-nav").on("click", function(event) {
     event.preventDefault();
     $("#main-content-area").empty();
+    $("#main-content-area").hide();
+    var divWrapper = $("<div id='movie-poster-wrapper-div'>");
     var row1 = $("<div>");
     row1.addClass("row");
     var col1a = $("<div>");
@@ -17,7 +19,7 @@ $("#movie-section-nav").on("click", function(event) {
     col1b.append('<img class="moviePoster" src="assets/images/posters/chamber-poster.png" />');
     row1.append(col1a);
     row1.append(col1b);
-    $("#main-content-area").append(row1);
+    divWrapper.append(row1);
     var row2 = $("<div>");
     row2.addClass("row");
     var col2a = $("<div>");
@@ -32,7 +34,7 @@ $("#movie-section-nav").on("click", function(event) {
     col2b.append('<img class="moviePoster" src="assets/images/posters/goblet-poster.png" />');
     row2.append(col2a);
     row2.append(col2b);
-    $("#main-content-area").append(row2);
+    divWrapper.append(row2);
     var row3 = $("<div>");
     row3.addClass("row");
     var col3a = $("<div>");
@@ -47,7 +49,7 @@ $("#movie-section-nav").on("click", function(event) {
     col3b.append('<img class="moviePoster" src="assets/images/posters/prince-poster.png" />');
     row3.append(col3a);
     row3.append(col3b);
-    $("#main-content-area").append(row3);
+    divWrapper.append(row3);
     var row4 = $("<div>");
     row4.addClass("row");
     var col4a = $("<div>");
@@ -62,7 +64,9 @@ $("#movie-section-nav").on("click", function(event) {
     col4b.append('<img class="moviePoster" src="assets/images/posters/hallows-poster.png" />');
     row4.append(col4a);
     row4.append(col4b);
-    $("#main-content-area").append(row4);
+    divWrapper.append(row4);
+    $("#main-content-area").append(divWrapper);
+    $("#main-content-area").fadeIn(fadeDuration);
     $("#scorcerer-poster").on("click", function(event) {
         if($(this).attr("data-state")=="poster"){
             $(this).attr("data-state", "movie-info");

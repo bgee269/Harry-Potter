@@ -14,7 +14,9 @@ function housePoints(){
     housePoints.attr("id", "myChart");
     chartDiv.append(housePoints);
     $("#main-content-area").empty();
+    $("#main-content-area").hide();
     $("#main-content-area").append(chartDiv);
+    $("#main-content-area").fadeIn(fadeDuration);
     //run when database is updated
     database.ref().on("value", function(snapshot) {
         globalSnapshot = snapshot.val();
