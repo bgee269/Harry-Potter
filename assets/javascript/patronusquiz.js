@@ -108,7 +108,7 @@ $("#patronus-quiz-nav").on("click", function(event) {
     $("#main-content-area").append(myDiv);
     $("#start-button").css("visibility", "hidden");
     $("#main-content-area").fadeIn(fadeDuration);
-    $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 20, callback: function () {showButton()} }});
+    $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 10, callback: function () {showButton()} }});
 });
 
 function showButton(){

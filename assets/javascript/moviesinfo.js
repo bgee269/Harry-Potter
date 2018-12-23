@@ -193,6 +193,6 @@ function loadMovieInfo(theMovie, theItem){
         theItem.append("<p class='myText'>Synopsis: "+response.Plot+"</p>");
         theItem.hide();
         theItem.fadeIn(fadeDuration);
-        $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 25 }});
+        $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 15 }});
     });
 }
