@@ -52,3 +52,10 @@
 .col-sm-6{
     height: 480px;
 }
+.sideNav:hover{
+    background-color: #FF2400;
+    color: #FFD700;
+}
+.sideNav{
+    height: 70px;
+}
