@@ -5,6 +5,7 @@ $("#character-quiz-nav").on("click", function(event) {
 
 var characterArray= [];
 var possibleSpecies = ["dog","fairy","pixie","dementor","basilisk","troll","dragon","boggart","unicorn","bat","minotaur","dwarf","frog"];
+var possiblePatronuses = ["hippo","bear","fox","rabbit","woolly mammoth","mouse","panda","beatle","bat","dragon","eagle","peacock"];
 var currentCharacterQuestionNumber = 1; 
 var currentCharacterQuizScore = 0;
 var currentCharacterQuizAnswer = "";
@@ -17,7 +18,7 @@ function startCharacterQuiz(){
         method: "GET"
     }).then(function(response) {
         characterArray = response;
-        console.log(characterArray);
+        //console.log(characterArray);
     });
     currentCharacterQuestionNumber = 1;
     currentCharacterQuizScore = 0;
@@ -34,7 +35,7 @@ function startCharacterQuiz(){
     characterDiv.append("</br>");
     $("#start-character-button").unbind("click");
     $("#start-character-button").on("click", function(event) {
-        console.log("hello");
+        //console.log("hello");
         characterQuiz();
     });
     characterDiv.append($('<button/>', {
@@ -65,6 +66,18 @@ function randomNoRepeats(array) {
   }
 
 function characterQuiz(){
+
+    var temparray = [];
+    for(var i = 0; i<characterArray.length; i++)
+    {
+        if("patronus" in characterArray[i]){
+            temparray.push(characterArray[i].patronus);
+        }
+    }
+    temparray.sort();
+    console.log(temparray);
+
+
     console.log("start character quiz");
     $("#main-content-area").empty();
     var myDiv = $("<div>");
@@ -111,20 +124,12 @@ function characterQuiz(){
     newCharacterQuestion();
 }
 function newCharacterQuestion(){
-    var randomNumber = Math.floor(Math.random() * (characterArray.length - 0 + 1)) + 0;
+    var randomNumber = Math.floor(Math.random() * ((characterArray.length-1) - 0 + 1)) + 1;
     console.log(randomNumber);
     var currentCharacter = characterArray[randomNumber];
-    console.log(currentCharacter.name);
+    console.log(currentCharacter);
     if(currentCharacterQuestionNumber<=10){
-        if("house" in currentCharacter){
-            $("#question").text(currentCharacter.name + " is a member of which Hogwarts house?");
-            $("#answer1").text("Gryffindor");
-            $("#answer2").text("Hufflepuff");
-            $("#answer3").text("Ravenclaw");
-            $("#answer4").text("Slytherin");
-            currentCharacterQuizAnswer = currentCharacter.house;
-        }
-        else if("species" in currentCharacter){
+        if("species" in currentCharacter){
             if(currentCharacter.species!="human"){
                 $("#question").text("What species is "+currentCharacter.name+"?");
                 $("#answer1").text(randomNoRepeats(possibleSpecies));
@@ -133,12 +138,27 @@ function newCharacterQuestion(){
                 $("#answer4").text(randomNoRepeats(possibleSpecies));
                 currentCharacterQuizAnswer = currentCharacter.species;
             }
+            else if("patronus" in currentCharacter){
+                $("#question").text("What is "+currentCharacter.name+"'s patronus?");
+                $("#answer1").text(randomNoRepeats(possiblePatronuses));
+                $("#answer2").text(currentCharacter.patronus);
+                $("#answer3").text(randomNoRepeats(possiblePatronuses));
+                $("#answer4").text(randomNoRepeats(possiblePatronuses));
+            }
             else if(currentCharacter.deathEater==true||currentCharacter.dumbledoresArmy==true||currentCharacter.ministryOfMagic==true||currentCharacter.orderOfThePhoenix==true){
                 $("#question").text(currentCharacter.name+" is a member of what group?");
                 $("#answer1").text("Death Eater");
                 $("#answer2").text("Dumbledore's Army");
                 $("#answer3").text("Ministry of Magic");
                 $("#answer4").text("Order of the Phoenix");
+            }
+            else if("house" in currentCharacter){
+                $("#question").text(currentCharacter.name + " is a member of which Hogwarts house?");
+                $("#answer1").text("Gryffindor");
+                $("#answer2").text("Hufflepuff");
+                $("#answer3").text("Ravenclaw");
+                $("#answer4").text("Slytherin");
+                currentCharacterQuizAnswer = currentCharacter.house;
             }
             else{
                 $("#question").text("What is the blood status of " + currentCharacter.name+"?");
