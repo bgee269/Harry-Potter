@@ -1,16 +1,16 @@
 .sideNav:hover, .buttonClass, #answer1:hover, #answer2:hover, #answer3:hover, #answer4:hover{
-    background-color: #ae0001;
-    color: #d3a625;
+    background-color: #2a623d;
+    color: #aaaaaa;
     border: none;
 }
 #question-div, #riddle-div-1, #riddle-div-2, #chart-div, #chatroom-div, #movie-poster-wrapper-div, #sorting-div{
-    border: 1px dashed #d3a625;
-	box-shadow: 0 0 0 3px #ae0001, 0 0 0 5px #d3a625, 0 0 0 10px #ae0001, 0 0 2px 10px #d3a625;
+    border: 1px dashed #aaaaaa;
+	box-shadow: 0 0 0 3px #2a623d, 0 0 0 5px #aaaaaa, 0 0 0 10px #2a623d, 0 0 2px 10px #aaaaaa;
     text-align: center;
     background-color: #FFE2B5;
 }
 body{
-    background-color: #ae0001;
+    background-color: #2a623d;
 }
 #patronus-image{
     max-width: 639px;

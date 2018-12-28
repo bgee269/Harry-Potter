@@ -3,6 +3,7 @@
 
 //set the current page if the table is clicked for chat room
 $("#house-points-nav").on("click", function(event) {
+   $('#emblem').width(96);
     event.preventDefault();
     housePoints();
 });
@@ -36,16 +37,16 @@ function makeHouseChart(){
                 label: '# of points',
                 data: [parseInt(globalSnapshot.houses.gryffindor.housePoints), parseInt(globalSnapshot.houses.hufflepuff.housePoints), parseInt(globalSnapshot.houses.ravenclaw.housePoints), parseInt(globalSnapshot.houses.slytherin.housePoints)],
                 backgroundColor: [
-                    '#FF2400',
-                    '#FFFF00',
-                    '#0000FF',
-                    '#00FF00',
+                    '#ae0001',
+                    '#f0c75e',
+                    '#222f5b',
+                    '#2a623d',
                 ],
                 borderColor: [
-                    '#FFD700',
-                    '#FFFFF',
-                    '#CD7F32',
-                    '#C0C0C0',
+                    '#d3a625',
+                    '#372e29',
+                    '#946b2d',
+                    '#aaaaaa',
                 ],
                 borderWidth: 5
             }]

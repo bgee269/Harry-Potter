@@ -32,3 +32,38 @@ $("#sorting-quiz-nav").on("mouseover", function(event) {
 $("#sorting-quiz-nav").on("mouseout", function(event) {
     $("#sorting-quiz-nav").text("Sorting Ceremony");
 });
+
+$(document).ready(function() { 
+    var vid = document.getElementById("myVideo");
+    vid.playbackRate = 1.0;
+    var today = new Date();
+    var thisDay = today.getDay();
+    var myDays=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+    thisDay = myDays[thisDay];
+    $("#today-date").text(thisDay);
+    var playerHouse = localStorage.getItem("playerHouse");
+    console.log(playerHouse);
+    if(playerHouse == "Gryffindor")
+    {
+        $('link[href="assets/css/patronusquiz.css"]').attr('href','assets/css/patronusquiz.css');
+        $("#emblem").attr("src", "assets/images/emblems/gry_emblem.png");
+    }
+    else if(playerHouse == "Hufflepuff")
+    {
+        $('link[href="assets/css/patronusquiz.css"]').attr('href','assets/css/huf.css');
+        $("#emblem").attr("src", "assets/images/emblems/huf_emblem.png");
+    }
+    else if(playerHouse == "Ravenclaw")
+    {
+        $('link[href="assets/css/patronusquiz.css"]').attr('href','assets/css/rav.css');
+        $("#emblem").attr("src", "assets/images/emblems/rav_emblem.png");
+    }
+    else if(playerHouse == "Slytherin")
+    {
+        $('link[href="assets/css/patronusquiz.css"]').attr('href','assets/css/sly.css');
+        $("#emblem").attr("src", "assets/images/emblems/sly_emblem.png");
+    }
+    else{
+
+    }
+});

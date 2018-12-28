@@ -7,24 +7,22 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="assets/css/harry.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/patronusquiz.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
         <script src="assets/javascript/Chart.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-        
+        <link rel="stylesheet" type="text/css" href="assets/css/harry.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/patronusquiz.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
     </head>
     <body>
-        <h1>Hogsmeade Hangout</h1>
-
-        <!-- <video autoplay muted loop id="myVideo">
+        <!-- <h1>Hogsmeade Hangout</h1> -->
+        <video autoplay muted loop id="myVideo">
             <source src="assets/video/background.mp4" type="video/mp4">
-        </video> -->
-        <!-- <div class="container content">  -->
-        <div class="container">
+        </video>
+        <div class="container content"> 
+        <!-- <div class="container"> -->
                 <div class="row">
                     <div id ="main-content-area" class="col-md-9">
                         <img style="float:left" src="assets/images/acceptance-letter.jpg">
@@ -33,6 +31,7 @@
                             <table class="table table-dark">
                                     <thead>
                                       <tr>
+                                           <p id="today-date">Today</p><img id="emblem" src="https://findicons.com/files/icons/423/harry_potter/128/home.png">
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -51,7 +50,6 @@
                                       <tr>
                                         <td class="sideNav" id="chat-room-nav">Great Hall</td>
                                       </tr>
-                                    <img src="https://findicons.com/files/icons/423/harry_potter/128/home.png">
                                     </tbody>
                                   </table>
                     </div>
@@ -97,5 +95,6 @@
 		<script src="assets/javascript/housepoints.js"></script>
 		<script src="assets/javascript/patronusquiz.js"></script>
         <script src="assets/javascript/moviesinfo.js"></script>
+        <script src="assets/javascript/sortingquiz.js"></script>
     </body>
 </html>

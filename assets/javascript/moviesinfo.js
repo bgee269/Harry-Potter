@@ -1,6 +1,7 @@
 var fadeDuration = 1000;
 
 $("#movie-section-nav").on("click", function(event) {
+    $('#emblem').width(96);
     event.preventDefault();
     $("#main-content-area").empty();
     $("#main-content-area").hide();

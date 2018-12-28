@@ -1,6 +1,6 @@
 var patronusArray = [["Phoenix", "Horse", "Dog"],["Swan", "Cat", "Doe"],["Otter", "Rabbit", "Fox"],["Stag", "Goat", "Wolf"]];
 
-var questionObject = {
+var questionPatronusObject = {
     question1: {
         question: "What best describes you?",
         answer1: "Brave",
@@ -74,6 +74,7 @@ var patronusSubSet3=0;
 var currentQuestionNumber = 1;
 
 $("#patronus-quiz-nav").on("click", function(event) {
+    $('#emblem').width(96); 
     event.preventDefault();
     currentQuestionNumber = 1;
     patronusSet1=0;
@@ -174,17 +175,17 @@ function newQuestion(){
     console.log("Question number: "+currentQuestionNumber);
 
     if(currentQuestionNumber<=5){
-        $("#question").text(questionObject['question'+currentQuestionNumber].question);
-        $("#answer1").text(questionObject['question'+currentQuestionNumber].answer1);
-        $("#answer2").text(questionObject['question'+currentQuestionNumber].answer2);
-        $("#answer3").text(questionObject['question'+currentQuestionNumber].answer3);
-        $("#answer4").text(questionObject['question'+currentQuestionNumber].answer4);
+        $("#question").text(questionPatronusObject['question'+currentQuestionNumber].question);
+        $("#answer1").text(questionPatronusObject['question'+currentQuestionNumber].answer1);
+        $("#answer2").text(questionPatronusObject['question'+currentQuestionNumber].answer2);
+        $("#answer3").text(questionPatronusObject['question'+currentQuestionNumber].answer3);
+        $("#answer4").text(questionPatronusObject['question'+currentQuestionNumber].answer4);
     }
     else if (currentQuestionNumber<=9){
-        $("#question").text(questionObject['question'+currentQuestionNumber].question);
-        $("#answer1").text(questionObject['question'+currentQuestionNumber].answer1);
-        $("#answer2").text(questionObject['question'+currentQuestionNumber].answer2);
-        $("#answer3").text(questionObject['question'+currentQuestionNumber].answer3);
+        $("#question").text(questionPatronusObject['question'+currentQuestionNumber].question);
+        $("#answer1").text(questionPatronusObject['question'+currentQuestionNumber].answer1);
+        $("#answer2").text(questionPatronusObject['question'+currentQuestionNumber].answer2);
+        $("#answer3").text(questionPatronusObject['question'+currentQuestionNumber].answer3);
         $("#answer4").text("");
 
     }
@@ -279,6 +280,8 @@ function patronusAnswer(){
     else{
 
     }
+    localStorage.setItem("playerPatronus", playerPatronus);
+
     $("#question").text("Congrats! Your Patronus is a "+playerPatronus);
     $("#question").append('<img id="patronus-image" src="assets/images/patronuses/'+playerPatronus+'.png" />');
 }
