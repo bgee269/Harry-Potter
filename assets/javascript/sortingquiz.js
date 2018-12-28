@@ -186,25 +186,71 @@ function sortingAnswer(){
     }
     localStorage.setItem("playerHouse", playerSorting);
     $("#question").text("Congrats! You have been sorted into "+playerSorting);
+    var queryURL = "https://www.potterapi.com/v1/houses?key=$2a$10$DDBq6xjn5.ygspvLDlhbzexwx3Y2SSm4giR3S3S8ntNgucfIJkhd6";
+
     if(playerSorting == "Gryffindor")
     {
         $('link[href="assets/css/patronusquiz.css"]').attr('href','assets/css/patronusquiz.css');
         $("#emblem").attr("src", "assets/images/emblems/gry_emblem.png");
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response[0]);
+            $("#question").append("<h3 class='myText'>House Founder: "+response[0].founder+"</h3>");
+            $("#question").append("<h3 class='myText'>Head of House: "+response[0].headOfHouse+"</h3>");
+            $("#question").append("<h3 class='myText'>House Ghost: "+response[0].houseGhost+"</h3>");
+            $("#question").append("<h3 class='myText'>House Mascot: "+response[0].mascot+"</h3>");
+            $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 10, callback: function () {} }});;
+        });
     }
     else if(playerSorting == "Hufflepuff")
     {
         $('link[href="assets/css/patronusquiz.css"]').attr('href','assets/css/huf.css');
         $("#emblem").attr("src", "assets/images/emblems/huf_emblem.png");
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response[0]);
+            $("#question").append("<h3 class='myText'>House Founder: "+response[3].founder+"</h3>");
+            $("#question").append("<h3 class='myText'>Head of House: "+response[3].headOfHouse+"</h3>");
+            $("#question").append("<h3 class='myText'>House Ghost: "+response[3].houseGhost+"</h3>");
+            $("#question").append("<h3 class='myText'>House Mascot: "+response[3].mascot+"</h3>");
+            $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 10, callback: function () {} }});;
+        });
     }
     else if(playerSorting == "Ravenclaw")
     {
         $('link[href="assets/css/patronusquiz.css"]').attr('href','assets/css/rav.css');
         $("#emblem").attr("src", "assets/images/emblems/rav_emblem.png");
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response[0]);
+            $("#question").append("<h3 class='myText'>House Founder: "+response[1].founder+"</h3>");
+            $("#question").append("<h3 class='myText'>Head of House: "+response[1].headOfHouse+"</h3>");
+            $("#question").append("<h3 class='myText'>House Ghost: "+response[1].houseGhost+"</h3>");
+            $("#question").append("<h3 class='myText'>House Mascot: "+response[1].mascot+"</h3>");
+            $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 10, callback: function () {} }});;
+        });
     }
     else if(playerSorting == "Slytherin")
     {
         $('link[href="assets/css/patronusquiz.css"]').attr('href','assets/css/sly.css');
         $("#emblem").attr("src", "assets/images/emblems/sly_emblem.png");
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response[0]);
+            $("#question").append("<h3 class='myText'>House Founder: "+response[2].founder+"</h3>");
+            $("#question").append("<h3 class='myText'>Head of House: "+response[2].headOfHouse+"</h3>");
+            $("#question").append("<h3 class='myText'>House Ghost: "+response[2].houseGhost+"</h3>");
+            $("#question").append("<h3 class='myText'>House Mascot: "+response[2].mascot+"</h3>");
+            $(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 10, callback: function () {} }});;
+        });
     }
     else{
 
