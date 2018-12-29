@@ -32,7 +32,7 @@ function chatRoom(){
             var myDiv = $("<div>");
             myDiv.attr("id", "chatroom-div");
             var chatInput = $("<form>");
-            chatInput.append("<input type='text' name='chatComment' id='chatComment' value=''><br><input id='submit' type='submit' value='Submit'>");
+            chatInput.append("<input type='text' name='chatComment' id='chatComment' value=''><br><input id='submit' class='buttonClass' type='submit' value='Submit'>");
             myDiv.append(chatInput);
             var chatDiv = $("<div>");
             chatDiv.attr("id", "chat-room");
@@ -41,7 +41,9 @@ function chatRoom(){
 
             //empty the div before adding to it
             $("#main-content-area").empty();
+            $("#main-content-area").hide();
             $("#main-content-area").append(myDiv);
+            $("#main-content-area").fadeIn(fadeDuration);
 
             //unbind then rebind submit click event to write to firebase
             $("#submit").unbind("click");
