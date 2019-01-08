@@ -1,6 +1,4 @@
-//container
-//row
-//columns
+
 
 var containerOne = $("<div>");
 containerOne.attr("id", "riddle-div");
@@ -54,6 +52,28 @@ for (var i = 0; i < answerArray.length; i++) {
     containerTwo.append(button);
 };
 
+var userSelect;
+
+//Function that answers the question
+function answerQuestion() {
+
+    $(button).on('click', function(){
+        userSelect = $(this).data('index');
+    }); 
+
+    if (userSelect === 3) {
+        //question answered correctly
+        $("#main-content-area").empty();
+        $("#main-content-area").append("That is correct!");
+    }
+    else {
+        //question incorrect
+        $("#main-content-area").empty();
+        $("#main-content-area").append("Sorry but that is wrong!");
+    }
+    
+};
+
 
 
 //CHANGE TO ONLICK WITH HTML CLICK
@@ -68,30 +88,10 @@ $("#hermione-game-nav").on("click", function (event) {
 $(document).on("click", "#start-button", function () {
     $("#main-content-area").empty();
     $("#main-content-area").append(containerTwo);
-    //hides start button
-    // $('#startBtn').hide();
+    answerQuestion();
 
-    //hide welcome message
-    // $('#welcome-message').hide();
-
-    //runs new game function
-    // answerRiddle();
 });
 
-    // function answerRiddle() {
-
-        // $("#main-content-area").append(containerTwo);
-        //hide welcome message
-        // $('#welcome-message').hide();
-
-        //show riddle
-        // $('#riddle-text').show();
-
-        //show questions 
-        // $('#questions-display').show();
-
-        //show answer options
-        // $('#answers-display').show();
 
 
 
