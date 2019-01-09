@@ -4,19 +4,19 @@ body {
     margin: 0;
 }
 
-#container {
+#container-flappy {
     position: relative;
     height: 400px;
     width: 90%;
     border: 2px solid red;
-    background-color: white;
+    background-color: #FFE2B5;
     margin-left: 4%;
     overflow: hidden;
 }
 
 #bird {
     position: absolute;
-    background: url('../images/harry.jpg');
+    background: url('../images/harryflying.gif');
     height: 42px;
     width: 65px;
     background-size: contain;
@@ -43,11 +43,7 @@ body {
 
 #score_div {
     text-align: center;
-    font-size: 40px;
-}
-
-p {
-    font-family: cursive;
+    font-size: 70px;
 }
 
 #restart_btn {
@@ -55,8 +51,8 @@ p {
     top: 0;
     width: 100%;
     padding: 20px;
-    background-color: gold;
-    color: white;
+    background-color: #ae0001;
+    color: #d3a625;
     font-size: 35px;
     border: none;
     cursor: pointer;

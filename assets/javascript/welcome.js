@@ -38,16 +38,16 @@ mainDiv.append(header);
 
 var textDiv = $("<div>");
 //text that will overlay on top of image
-textDiv.append("<b><center><h3>Headmaster: Albus Dumbledore</h3></center></b>");
-textDiv.append("<center><h4>(Order of Merlin, First Class, Grand Sorc., Chf. Warlock, Supreme Mugwump, International Confed. of Wizards)</h4></center>");
+textDiv.append("<b><center><h3 class='myText'>Headmaster: Albus Dumbledore</h3></center></b>");
+textDiv.append("<center><h4 class='myText'>(Order of Merlin, First Class, Grand Sorc., Chf. Warlock, Supreme Mugwump, International Confed. of Wizards)</h4></center>");
 textDiv.append("</br>");
 textDiv.append("</br>");
-textDiv.append("<p>Welcome Student,</p>");
-textDiv.append("<p>We are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry. Please find a list of all of your classes on the screen. Here at the Hogsmeade Hangout, you will be able to engage in games, obtain movie information, and participate in the Harry Potter community. Please remember to be kind and use appropriate language in the chat room. Get started by clicking on the Sorting Ceremony to be sorted in your houses!</p>")
+textDiv.append("<p class='myText'>Welcome Student,</p>");
+textDiv.append("<p class='myText'>We are pleased to inform you that you have been accepted at Hogwarts School of Witchcraft and Wizardry. Please find a list of all of your classes on the screen. Here at the Hogsmeade Hangout, you will be able to engage in games, obtain movie information, and participate in the Harry Potter community. Please remember to be kind and use appropriate language in the chat room. Get started by clicking on the Sorting Ceremony to be sorted in your houses!</p>")
 textDiv.append("</br>");
 textDiv.append("</br>");
 textDiv.append("</br>");
-textDiv.append("<p>Sincerely,</p>");
+textDiv.append("<p class='myText'>Sincerely,</p>");
 
 
 //signature
@@ -58,8 +58,8 @@ signature.css('height' , '60px');
 
 textDiv.append(signature);
 
-textDiv.append("<p>Minerva McGonagall</p>");
-textDiv.append("<p>Deputy Headmistress</p>");
+textDiv.append("<p class='myText'>Minerva McGonagall</p>");
+textDiv.append("<p class='myText'>Deputy Headmistress</p>");
 
 textDiv.css("padding" , '30px');
 // textDiv.css("padding-right" , '70px');
@@ -70,3 +70,5 @@ textDiv.css("padding" , '30px');
 mainDiv.append(textDiv);
 
 $("#main-content-area").append(mainDiv);
+
+$(".myText").textillate({ in: { effect: 'fadeIn', shuffle: 'true', delay: 7 }});
