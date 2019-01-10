@@ -3,7 +3,7 @@
     color: #d3a625;
     border: none;
 }
-#question-div, #riddle-div-1, #riddle-div-2, #chart-div, #chatroom-div, #movie-poster-wrapper-div, #sorting-div, #spell-div, #character-div{
+#question-div, #riddle-div, #riddle-div-2, #chart-div, #chatroom-div, #movie-poster-wrapper-div, #sorting-div, #spell-div, #character-div{
     border: 1px dashed #d3a625;
 	box-shadow: 0 0 0 3px #ae0001, 0 0 0 5px #d3a625, 0 0 0 10px #ae0001, 0 0 2px 10px #d3a625;
     text-align: center;

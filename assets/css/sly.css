@@ -3,7 +3,7 @@
     color: #aaaaaa;
     border: none;
 }
-#question-div, #riddle-div-1, #riddle-div-2, #chart-div, #chatroom-div, #movie-poster-wrapper-div, #sorting-div, #spell-div, #character-div{
+#question-div, #riddle-div, #riddle-div-2, #chart-div, #chatroom-div, #movie-poster-wrapper-div, #sorting-div, #spell-div, #character-div{
     border: 1px dashed #aaaaaa;
 	box-shadow: 0 0 0 3px #2a623d, 0 0 0 5px #aaaaaa, 0 0 0 10px #2a623d, 0 0 2px 10px #aaaaaa;
     text-align: center;

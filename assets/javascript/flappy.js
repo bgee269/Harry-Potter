@@ -1,7 +1,45 @@
-$(function () {
+$("#flappy-potter-nav").on("click", function(event) {
+    loadFlappyGame();
+});
 
+function loadFlappyGame(){
+    console.log("hello chumps!");
+    event.preventDefault();
+    $("#main-content-area").empty();
+    var flappyDiv = $("<div>");
+
+    var divContainer = $("<div>");
+    divContainer.attr("id", "container-flappy");
+    var divBird = $("<div>");
+    divBird.attr("id", "bird");
+    var divPole1 = $("<div>");
+    divPole1.attr("id", "pole_1");
+    divPole1.addClass("pole");
+    var divPole2 = $("<div>");
+    divPole2.attr("id", "pole_2");
+    divPole2.addClass("pole");
+    divContainer.append(divBird);
+    divContainer.append(divPole1);
+    divContainer.append(divPole2);
+
+    var divScore = $("<div>");
+    divScore.attr("id", "score_div");
+    divScore.append('<p><b>Score: </b><span id="score">0</span></p>');
+    divScore.append('<p><b>Speed: </b><span id="speed">10</span></p>');
+
+    flappyDiv.append(divContainer);
+    flappyDiv.append(divScore);
+    flappyDiv.append('<button id="restart_btn">Restart</button>');
+
+    $("#main-content-area").append(flappyDiv);
+
+    startFlappyGame();
+};
+
+function startFlappyGame(){
+    console.log("Start game");
     //saving dom objects to variables
-    var container = $('#container');
+    var container = $('#container-flappy');
     var bird = $('#bird');
     var pole = $('.pole');
     var pole_1 = $('#pole_1');
@@ -114,7 +152,7 @@ $(function () {
     // Restart
 
     restart_btn.click(function () {
-        location.reload();
+        loadFlappyGame();
     });
 
     // Collision
@@ -139,4 +177,4 @@ $(function () {
 
 
     }
-});
+};
