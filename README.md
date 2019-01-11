@@ -1,73 +1,35 @@
-# Harry-Potter #
+# Introduction
 
-## Initial sorting, need 5 questions ##
+HogsMead Hangout is a Harry Potter fan-site for information, interaction, games and fun.
 
-### What best describes you? ###
-Brave
-Kind
-Intelligent
-Decisive
+## Features
 
-### What is your favorite time of day? ###
-Morning 
-Evening
-Afternoon
-Night
+Take a short quiz and get sorted into a Hogwarts House
 
-### What was your favorite class in muggle school? ###
-Physical Education
-Art
-Math
-History
+Learn about all available Harry Potter movies
 
-### With which element are you most closely aligned? ###
-Fire
-Earth
-Air
-Water
+Take a 9 Question Quiz to discover your inner petronus
 
-### What is your favorite season? ###
-Spring
-Summer
-Fall
-Winter
+Play a Harry Potter themed rendition of "Flappy Bird"
 
-## Each section now has three options, needs 4 questions to determine Patronus ##
+Take a character quiz to earn points for the house you have been sorted into
 
-### What negative trait do you least possess? ###
-Showiness
-Stubbornness
-Clinginess 
+Take a spell quiz to earn points for the house you have been sorted into
 
-### What best categorizes you? ###
-Unique
-Independent
-Loyal
+See a visual representation of the points each house has accumulated
 
-### What would you most like touch? ###
-Shaggy
-Silky
-Soft
+Solve a Harry Potter themed riddle 
 
-### You've come to a fork in the road with three paths. Which do you take? ###
-Straight
-Left
-Right
+Select a Username and chat with fellow Harry Potter fans
 
+## Feedback
 
-# Patronus Path #
-Phoenix
-Horse
-Dog
+Feel free to send us feedback in-person or via slack
 
-Swan
-Cat
-Doe
+## Contributors
 
-Otter
-Rabbit
-Fox
+This Project was brought to you by Thomas Woods, Alina Vo, and Brandon Gee
 
-Stag
-Goat
-Wolf
+## Acknowledgements 
+
+Thank you to Upenn for the amazing program!

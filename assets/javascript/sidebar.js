@@ -32,6 +32,30 @@ $("#sorting-quiz-nav").on("mouseover", function(event) {
 $("#sorting-quiz-nav").on("mouseout", function(event) {
     $("#sorting-quiz-nav").text("Sorting Ceremony");
 });
+$("#flappy-potter-nav").on("mouseover", function(event) {
+    $("#flappy-potter-nav").text("Play a quick match!");
+});
+$("#flappy-potter-nav").on("mouseout", function(event) {
+    $("#flappy-potter-nav").text("Quidditch Match");
+});
+$("#character-quiz-nav").on("mouseover", function(event) {
+    $("#character-quiz-nav").text("Take a quiz to earn house points");
+});
+$("#character-quiz-nav").on("mouseout", function(event) {
+    $("#character-quiz-nav").text("Divination");
+});
+$("#spell-quiz-nav").on("mouseover", function(event) {
+    $("#spell-quiz-nav").text("Did you study your spells?");
+});
+$("#spell-quiz-nav").on("mouseout", function(event) {
+    $("#spell-quiz-nav").text("Charms");
+});
+$("#hermione-game-nav").on("mouseover", function(event) {
+    $("#hermione-game-nav").text("Help Hermione solve a potions riddle");
+});
+$("#hermione-game-nav").on("mouseout", function(event) {
+    $("#hermione-game-nav").text("Potions");
+});
 
 $(document).ready(function() { 
     var vid = document.getElementById("myVideo");
