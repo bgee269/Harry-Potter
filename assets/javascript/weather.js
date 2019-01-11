@@ -2,7 +2,7 @@
 
 getWeather();
 function getWeather(){
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=imperial&APPID="+"c6cad450ea81f44b2d9d494580d84806";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&units=imperial&APPID="+"c6cad450ea81f44b2d9d494580d84806";
     $.ajax({
             url: queryURL,
             method: "GET"
