@@ -50,7 +50,7 @@ function chatRoom(){
             $("#submit").on("click", function(event) {
                 event.preventDefault();
                 //only chat if user has a name
-                if(sessionStorage.getItem("username")!=null){
+                if(sessionStorage.getItem("username")!=null && $("#chatComment").val().trim()!=""){
                     var dt = new Date();
                     var theTime = "("+pad(dt.getHours()) + ":" + pad(dt.getMinutes()) + ":" + pad(dt.getSeconds())+")";
                     $("#chat-room").prepend("<p>"+sessionStorage.getItem("username") +" "+ theTime +": " + $("#chatComment").val().trim()+"</p>");
